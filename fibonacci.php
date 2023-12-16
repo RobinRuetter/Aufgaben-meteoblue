@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,14 @@ function fibonacci($n) {
 
 // Berechne die ersten 100 Zahlen der Fibonacci-Reihe
 $result = fibonacci(100);
+
+// Gib die Ergebnisse aus
+echo "<h2>Fibonacci-Reihe (die ersten 100 Zahlen)</h2>";
+echo "<ul>";
+foreach ($result as $i => $number) {
+    echo "<li>Element " . ($i + 1) . ": $number</li>";
+}
+echo "</ul>";
 ?>
 </body>
 </html>
