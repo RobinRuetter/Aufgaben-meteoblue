@@ -6,6 +6,12 @@
     <title>Fibonacci-Reihe</title>
 </head>
 <body>
+    <h2>Größter gemeinsamer Teiler berechnen</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Zahl 1: <input type="text" name="zahl1"><br>
+        Zahl 2: <input type="text" name="zahl2"><br>
+        <input type="submit" value="Berechnen">
+    </form>
 <?php
 function berechneGgt($a, $b) {
     // Solange der Rest nicht gleich 0 ist, setze $b auf $a und $a auf den Rest
@@ -30,11 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Der größte gemeinsame Teiler von $zahl1 und $zahl2 ist: $ggT";
 }
 ?>
-    <h2>Größter gemeinsamer Teiler berechnen</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        Zahl 1: <input type="text" name="zahl1"><br>
-        Zahl 2: <input type="text" name="zahl2"><br>
-        <input type="submit" value="Berechnen">
-    </form>
 </body>
 </html>
