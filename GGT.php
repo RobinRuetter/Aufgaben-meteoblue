@@ -17,7 +17,18 @@ function berechneGgt($a, $b) {
     // Wenn $b gleich 0 ist, dann ist $a der ggT
     return $a;
 }
+// Überprüfen, ob das Formular gesendet wurde
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Benutzereingabe aus dem Formular
+    $zahl1 = isset($_POST["zahl1"]) ? intval($_POST["zahl1"]) : 0;
+    $zahl2 = isset($_POST["zahl2"]) ? intval($_POST["zahl2"]) : 0;
 
+    // ggT berechnen
+    $ggT = berechneGgt($zahl1, $zahl2);
+
+    // Ergebnis ausgeben
+    echo "Der größte gemeinsame Teiler von $zahl1 und $zahl2 ist: $ggT";
+}
 ?>
     <h2>Größter gemeinsamer Teiler berechnen</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
