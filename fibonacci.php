@@ -15,6 +15,8 @@ function fibonacci($n) {
     return $fib_sequence;
 }
 
+// Berechne die ersten 100 Zahlen der Fibonacci-Reihe
+$result = fibonacci(100);
 ?>
 </body>
 </html>
