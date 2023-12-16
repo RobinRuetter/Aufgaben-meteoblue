@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php
-
 function berechneGgt($a, $b) {
     // Solange der Rest nicht gleich 0 ist, setze $b auf $a und $a auf den Rest
     while ($b != 0) {
@@ -20,5 +19,11 @@ function berechneGgt($a, $b) {
 }
 
 ?>
+    <h2>Größter gemeinsamer Teiler berechnen</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Zahl 1: <input type="text" name="zahl1"><br>
+        Zahl 2: <input type="text" name="zahl2"><br>
+        <input type="submit" value="Berechnen">
+    </form>
 </body>
 </html>
